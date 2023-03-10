@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UJIKOM 2023</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
   <style>
@@ -19,6 +20,10 @@
     body {
         background-color: wheat;
     }
+    .font {
+    position: relative;
+    right: 20px;
+   }
   </style>
   <body>
     <nav class="navbar sticky-top shadow-lg navbar-expand-md bg-light">
@@ -85,26 +90,26 @@
         <div class="container pt-5">
             <div class="row text-center">
                 <div class="col">
-                    <h2>UJIKOM 2023</h2>
+                    <h2 class="display"></h2>
                 </div>
             </div>
             <div class="row justify-content-evenly pt-5">
-                <div class="col-4">
+                <div class="col-4 colom">
                     <img src="./images/ujk1.jpeg" class="img-thumbnail" alt="...">
                 </div>
-                <div class="col-4">
+                <div class="col-4 colom">
                     <img src="./images/ujk2.jpeg" class="img-thumbnail" alt="...">
                 </div>
-                <div class="col-4">
+                <div class="col-4 colom">
                     <img src="./images/ujk3.jpeg" class="img-thumbnail" alt="...">
                 </div>
-                <div class="col-4 pt-4">
+                <div class="col-4 colom pt-4">
                     <img src="./images/ujk4.jpeg" class="img-thumbnail" alt="...">
                 </div>
-                <div class="col-4 pt-4">
+                <div class="col-4 colom pt-4">
                     <img src="./images/ujk5.jpeg" class="img-thumbnail" alt="...">
                 </div>
-                <div class="col-4 pt-4">
+                <div class="col-4 colom pt-4">
                     <img src="./images/ujk6.jpeg" class="img-thumbnail" alt="...">
                 </div>
                 
@@ -127,11 +132,11 @@
           </div>
         </div>
         <div class="row justify-content-evenly text-light mt-3">
-          <div class="col-2 text-center ">
+          <div class="col-2 text-center "  data-aos="fade-right" data-aos-duration="1500">
            <p><img src="./images/ig.png" alt="" width="60"></p>
-           <h3>nopalrsfna_</h3>
+           <h3 class="font">nopalrsfna_</h3>
           </div>
-          <div class="col-4 text-center ">
+          <div class="col-4 text-center "  data-aos="fade-left" data-aos-duration="2000">
            <p><img src="./images/wa.png" alt="" width="60"></p>
            <h3>085624148285</p>
           </div>
@@ -153,7 +158,27 @@
    
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+<script>
+  gsap.registerPlugin(TextPlugin);
+  gsap.to('.display', {
+    duration: 2, delay: 0.5, text: 'UJIKOM 2023'
+  });
+  gsap.from('.navbar', {
+    duration: 3, y: -100, opacity: 0, ease: 'bounce'
+  });
+  gsap.from('.colom', {
+    duration: 2, x: -100, opacity: 0, ease: 'bounce'
+  });
+  gsap.from('.display', {
+    duration: 1, x: 100, opacity: 0, delay: 0.5,  ease: 'back'
+  });
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
