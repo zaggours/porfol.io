@@ -70,7 +70,7 @@
         <div class="jumbotron text-dark pt-5"  data-aos="fade-up"
         data-aos-anchor-placement="center-bottom">
         <div class="gambar text-light" style="height: 300px;">
-            <h1 class="display-md mb-5">WELCOME TO MY PROJECT</h1>
+            <h1 class="display-md mb-5 welcome"></h1>
            <img class="img-circle" src="https://www.smkn4kuningan.sch.id/assets/img/logo.png" alt="" width="150">
           </div>
            
@@ -147,8 +147,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script>
        gsap.registerPlugin(TextPlugin);
+      gsap.to('.welcome', {
+        duration: 4, delay: 1, text: 'WELCOME TO MY PROJECT'
+      });
       gsap.to('.game', {
-        duration: 4, delay: 1, text: 'MY GAME'
+        duration: 3, delay: 1, text: 'MY GAME'
       });
        gsap.registerPlugin(TextPlugin);
       gsap.to('.contact', {
